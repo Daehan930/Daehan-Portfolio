@@ -62,3 +62,8 @@ textarea,
 select {
   font: inherit;
 }
+
+
+body {
+  font-family: 'Pretendard', sans-serif;
+}
