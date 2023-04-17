@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaGithub, FaCommentDots } from "react-icons/fa";
+import { Link } from "react-scroll";
 import "./Header.css";
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(true);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -11,29 +12,75 @@ const Header = () => {
 
   return (
     <header className="header">
-
       <div className="menu-container">
-       
+      
         <nav className={`menu ${menuOpen ? "open" : ""}`}>
           <ul>
             <li>
-              <a href="#about">ABOUT</a>
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={toggleMenu}
+              >
+                ABOUT
+              </Link>
             </li>
             <li>
-              <a href="#project">PROJECT</a>
+              <Link
+                activeClass="active"
+                to="project"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={toggleMenu}
+              >
+                PROJECT
+              </Link>
             </li>
             <li>
-              <a href="#contact">CONTACT</a>
+              <Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={toggleMenu}
+              >
+                CONTACT
+              </Link>
             </li>
           </ul>
         </nav>
-
         <button className="menu-toggle" onClick={toggleMenu}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
-        
+        {menuOpen && (
+          <div className="social-icons">
+            <a
+              href="https://open.kakao.com/talk" // 카카오톡 대화걸기 링크로 수정해주세요
+              target="_blank"
+              rel="noreferrer"
+              className="social-icon"
+            >
+              <FaCommentDots style={{left:"0"}}/>
+            </a>
+            <a
+              href="https://github.com/yourusername" // 깃허브 주소로 수정해주세요
+              target="_blank"
+              rel="noreferrer"
+              className="social-icon"
+            >
+              <FaGithub />
+            </a>
+          </div>
+        )}
       </div>
-
     </header>
   );
 };
