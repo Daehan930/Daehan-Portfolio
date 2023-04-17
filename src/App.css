@@ -7,8 +7,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px auto; /* margin 속성을 사용한 예시 */
-    /* 또는 */
-    /* padding: 0 45px; */ /* padding 속성을 사용한 예시 */
+    margin: 10px auto;
   }
   
