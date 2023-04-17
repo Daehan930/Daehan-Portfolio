@@ -60,7 +60,7 @@ const Header = () => {
         <button className="menu-toggle" onClick={toggleMenu}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
-        {menuOpen && (
+        {/* {menuOpen && (
           <div className="social-icons">
             <a
               href="https://open.kakao.com/talk" // 카카오톡 대화걸기 링크로 수정해주세요
@@ -79,7 +79,7 @@ const Header = () => {
               <FaGithub />
             </a>
           </div>
-        )}
+        )} */}
       </div>
     </header>
   );

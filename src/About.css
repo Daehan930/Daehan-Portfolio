@@ -1,11 +1,13 @@
 .about {
   padding: 4rem 0;
+  max-width: 990px;
+  margin: 0 auto;
 }
 
 .about h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  
+  font-size: 3.5rem;
+  margin-bottom: 5rem;
+  font-weight: 700;
 }
 
 .about h2::after{
@@ -13,7 +15,7 @@
     display: block;
     bottom: 0;
     left: 0;
-    width: 22%;
+    width: 30%;
     height: 1px;
     background-color: #0040BD;
 }
@@ -22,34 +24,42 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
 }
 
 .about-content img {
-  width: 300px;
-  height: 300px;
   object-fit: cover;
 }
 
-.about-text {
-  max-width: 600px;
-}
+/* .about-text {
+} */
 
 .about-text h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  padding-top: 4rem;
+  font-weight: 700;
+}
+
+.about-text span{
+  font-size: 3.5rem;
+
+  color: #0040BD;
+  font-weight: 700;
 }
 
 .about-text p {
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.5;
+  font-weight: 600;
 }
+
+
 
 .about-icons {
   display: flex;
-  justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
+  justify-content: flex-end;
 }
 
 .about-icons img {
