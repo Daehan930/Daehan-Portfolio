@@ -32,7 +32,7 @@ const Header = () => {
             <li>
               <Link
                 activeClass="active"
-                to="project"
+                to="ProjectSection"
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -60,29 +60,29 @@ const Header = () => {
         <button className="menu-toggle" onClick={toggleMenu}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
-        {/* {menuOpen && (
-          <div className="social-icons">
-            <a
-              href="https://open.kakao.com/talk" // 카카오톡 대화걸기 링크로 수정해주세요
-              target="_blank"
-              rel="noreferrer"
-              className="social-icon"
-            >
-              <FaCommentDots style={{left:"0"}}/>
-            </a>
-            <a
-              href="https://github.com/yourusername" // 깃허브 주소로 수정해주세요
-              target="_blank"
-              rel="noreferrer"
-              className="social-icon"
-            >
-              <FaGithub />
-            </a>
-          </div>
-        )} */}
       </div>
     </header>
   );
 };
 
 export default Header;
+// {/* {menuOpen && (
+//   <div className="social-icons">
+//     <a
+//       href="https://open.kakao.com/talk" // 카카오톡 대화걸기 링크로 수정해주세요
+//       target="_blank"
+//       rel="noreferrer"
+//       className="social-icon"
+//     >
+//       <FaCommentDots style={{left:"0"}}/>
+//     </a>
+//     <a
+//       href="https://github.com/yourusername" // 깃허브 주소로 수정해주세요
+//       target="_blank"
+//       rel="noreferrer"
+//       className="social-icon"
+//     >
+//       <FaGithub />
+//     </a>
+//   </div>
+// )} */}

@@ -24,14 +24,28 @@ const About = () => {
             배운 모든 것을 기록하고 공유하는 것을 좋아합니다.
             공유의 중요성을 잘 알기에 항상 새기고 실천하려고 노력합니다.
           </p>
-       
-          <div className="about-icons">
-           <p>1. Use Skill</p>
-           <p>2. 이런 기술들을 배웠어요</p>
-            {/* <img /> */}
-            <p>Last update: 2023/04/18</p>
-          </div>
+
         </div>
+
+      </div>
+
+      <h2>USE SKILL</h2>
+
+      <div className="about-icons">
+
+        <div className="image-container">
+          <img src="icon/csscon.png" />
+          <img src="icon/figmacon.png" />
+          <img src="icon/gitcon.png" />
+          <img src="icon/githubcon.png" />
+          <img src="icon/htmlcon.png" />
+          <img src="icon/jscon.png" />
+          <img src="icon/jsoncon.png" />
+          <img src="icon/mollu.png" />
+          <img src="icon/mysqlcon.png" />
+          <img src="icon/nextcon.png" />
+        </div>
+       <p>Last update: 2023/04/19</p>
       </div>
     </section>
   );

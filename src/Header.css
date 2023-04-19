@@ -65,9 +65,7 @@
 
 .menu li a:hover {
   font-weight: bold;
-  /* 밑줄에 대한 기본 스타일을 적용합니다 */
   text-decoration: none;
-  /* 가상 요소를 사용하여 밑줄을 생성합니다 */
 }
 
 .menu li a::after {
