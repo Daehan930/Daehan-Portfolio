@@ -6,7 +6,7 @@
   z-index: 100;
   display: flex;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 .menu-container {
@@ -19,7 +19,7 @@
 
 .menu-toggle {
   background-color: transparent;
-  border: 1px solid #000000;
+  border: 2px solid #000000;
   border-radius: 100px;
   cursor: pointer;
   font-size: 1.5rem;
@@ -32,14 +32,19 @@
 }
 
 .menu {
-  background-color: white;
-  border: 1px solid #000000;
+  border: 2px solid #000000;
   border-radius: 100px;
   padding: 5px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
   transform: translateX(10px);
+  backdrop-filter: blur(5px);
+}
+
+.menu:hover {
+  background-color: white;
+  border: 2px solid #0040BD;
 }
 
 .menu.open {
@@ -58,7 +63,11 @@
   padding: 0 10rem;
   }
 
+
+
+
 .menu li a {
+  font-weight: 500;
   text-decoration: none;
   color: #000000;
 }
@@ -74,13 +83,13 @@
   bottom: 0;
   left: 0;
   width: 0;
-  height: 1px;
+  height: 2px;
   background-color: #0040BD;
   transition: width 0.5s;
 }
 
 .menu li a:hover::after {
-  width: 155%;
+  width: 150%;
 }
 
 

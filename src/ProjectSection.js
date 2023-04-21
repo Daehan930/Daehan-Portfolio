@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import { Element } from 'react-scroll';
+import './ProjectSection.css';
 
 
 const projects = [
@@ -27,12 +28,13 @@ function ProjectSection() {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: '30%',
+    centerPadding: '20%',
   };
 
   return (
     <Element name="ProjectSection">
-    <div className="project-section" id="ProjectSection">
+    <div className="project-section" id="project">
+      <h2>PROJECT</h2>
       <Slider {...settings}>
         {projects.map((project, index) => (
           <div key={index} className="project-slide">

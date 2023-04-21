@@ -1,59 +1,100 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes, FaGithub, FaCommentDots } from "react-icons/fa";
-import { Link } from "react-scroll";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+import { scroller } from "react-scroll";
 import "./Header.css";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(true);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const handleProjectClick = () => {
+    if (!isHomePage) {
+      navigate("/");
+      setTimeout(() => {
+        scroller.scrollTo("project", {
+          duration: 800,
+          delay: 0,
+          smooth: "easeInOutQuart",
+          offset: -70,
+        });
+      }, 100);
+    } else {
+      scroller.scrollTo("project", {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+        offset: -70,
+      });
+    }
+  };
+
+  const isHomePage = window.location.pathname === "/";
+
   return (
     <header className="header">
       <div className="menu-container">
-      
         <nav className={`menu ${menuOpen ? "open" : ""}`}>
           <ul>
             <li>
-              <Link
-                activeClass="active"
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                onClick={toggleMenu}
-              >
-                ABOUT
-              </Link>
+              {isHomePage ? (
+                <ScrollLink
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  onClick={toggleMenu}
+                >
+                  ABOUT
+                </ScrollLink>
+              ) : (
+                <Link to="/#about" onClick={toggleMenu}>
+                  ABOUT
+                </Link>
+              )}
             </li>
             <li>
-              <Link
-                activeClass="active"
-                to="ProjectSection"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                onClick={toggleMenu}
-              >
-                PROJECT
-              </Link>
+              {isHomePage ? (
+                <ScrollLink
+                  activeClass="active"
+                  to="project"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  onClick={toggleMenu}
+                >
+                  PROJECT
+                </ScrollLink>
+              ) : (
+                <Link to="/#project" onClick={handleProjectClick}>PROJECT</Link>
+              )}
             </li>
             <li>
-              <Link
-                activeClass="active"
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                onClick={toggleMenu}
-              >
-                CONTACT
-              </Link>
+              {isHomePage ? (
+                <ScrollLink
+                  activeClass="active"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  onClick={toggleMenu}
+                >
+                  CONTACT
+                </ScrollLink>
+              ) : (
+                <Link to="/#contact" onClick={toggleMenu}>
+                  CONTACT
+                </Link>
+              )}
             </li>
           </ul>
         </nav>
@@ -66,23 +107,3 @@ const Header = () => {
 };
 
 export default Header;
-// {/* {menuOpen && (
-//   <div className="social-icons">
-//     <a
-//       href="https://open.kakao.com/talk" // 카카오톡 대화걸기 링크로 수정해주세요
-//       target="_blank"
-//       rel="noreferrer"
-//       className="social-icon"
-//     >
-//       <FaCommentDots style={{left:"0"}}/>
-//     </a>
-//     <a
-//       href="https://github.com/yourusername" // 깃허브 주소로 수정해주세요
-//       target="_blank"
-//       rel="noreferrer"
-//       className="social-icon"
-//     >
-//       <FaGithub />
-//     </a>
-//   </div>
-// )} */}
